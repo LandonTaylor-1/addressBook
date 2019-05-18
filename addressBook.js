@@ -47,13 +47,13 @@ function allUsers() {
             let createLi = document.createElement("li");
             let contactList = document.getElementById("allContacts");
             let image = document.createElement("img");
-            // let newButton = document.createElement("button");
-            // newButton.setAttribute('class', 'moreInfo');
-            // newButton.innerHTML = "More Information";
+            let newButton = document.createElement("button");
+            newButton.setAttribute('class', 'moreInfo');
+            newButton.innerHTML = "More Information";
             image.src = person.picture.thumbnail;
             createLi.appendChild(image);
             createLi.appendChild(document.createTextNode(person.name.first + " " + person.name.last));
-            // createLi.appendChild(newButton);
+            createLi.appendChild(newButton);
             contactList.append(createLi);
         });
     multipleArray = [];
@@ -68,8 +68,8 @@ window.onload = function() {
     allUsers()
 }
 
-// document.getElementById("moreinfo").onclick = function() {moreinfo()};
+document.getElementById("moreinfo").addEventListener("click", moreinfo1);
 
-function moreinfo() {
+function moreinfo1() {
     console.log('it worked!')
-}
+};
