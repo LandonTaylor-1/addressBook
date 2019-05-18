@@ -17,13 +17,19 @@ function get(){
             let createLi = document.createElement("li");
             let contactList = document.getElementById("contacts");
             let image = document.createElement("img");
-            let newButton = document.createElement("button");
-            newButton.setAttribute('id', 'moreinfo');
-            newButton.innerHTML = "More Information";
+            let button = document.createElement('button');
+            button.addEventListener("click",(e) => {
+                let textBox = document.createElement('p');
+                let pText = document.createTextNode("Cell: " + person.cell + " " + "Age: " + person.dob.age);
+                textBox.appendChild(pText);
+                createLi.appendChild(textBox);
+            })
             image.src = person.picture.thumbnail;
             createLi.appendChild(image);
             createLi.appendChild(document.createTextNode(person.name.first + " " + person.name.last));
-            createLi.appendChild(newButton);
+            createLi.appendChild(button);
+            let buttonText = document.createTextNode("More Info");
+            button.appendChild(buttonText);
             contactList.append(createLi);
         })
 }
@@ -47,13 +53,19 @@ function allUsers() {
             let createLi = document.createElement("li");
             let contactList = document.getElementById("allContacts");
             let image = document.createElement("img");
-            let newButton = document.createElement("button");
-            newButton.setAttribute('class', 'moreInfo');
-            newButton.innerHTML = "More Information";
+            let button = document.createElement('button');
+            button.addEventListener("click",(e) => {
+                let textBox = document.createElement('p');
+                let pText = document.createTextNode("Cell: " + person.cell + " " + "Age: " + person.dob.age);
+                textBox.appendChild(pText);
+                createLi.appendChild(textBox);
+            })
             image.src = person.picture.thumbnail;
             createLi.appendChild(image);
             createLi.appendChild(document.createTextNode(person.name.first + " " + person.name.last));
-            createLi.appendChild(newButton);
+            createLi.appendChild(button);
+            let buttonText = document.createTextNode("More Info");
+            button.appendChild(buttonText);
             contactList.append(createLi);
         });
     multipleArray = [];
@@ -68,8 +80,8 @@ window.onload = function() {
     allUsers()
 }
 
-document.getElementById("moreinfo").addEventListener("click", moreinfo1);
+// document.getElementById("moreinfo").addEventListener("click", moreinfo1);
 
-function moreinfo1() {
-    console.log('it worked!')
-};
+// function moreinfo1() {
+//     console.log('it worked!')
+// };
