@@ -79,9 +79,3 @@ delayFunction();
 window.onload = function() {
     allUsers()
 }
-
-// document.getElementById("moreinfo").addEventListener("click", moreinfo1);
-
-// function moreinfo1() {
-//     console.log('it worked!')
-// };
