@@ -18,6 +18,6 @@
   "homepage": "https://github.com/LandonTaylor-1/addressBook#readme",
   "dependencies": {
     "mocha": "^6.1.4",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^3.1.1"
   }
 }
